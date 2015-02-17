@@ -1,0 +1,44 @@
+{
+  "about": {
+    "name": "Integrations Theme",
+    "extends": "core5",
+    "isDesktop": true,
+    "isMobile": false,
+    "version": "0.1.0"
+  },
+  "pageTypes": [],
+  "widgets": [
+  { 
+        "category" : "catalog",
+        "id":"bv-conversations-ratings",
+        "displayName":"BazaarVoice Conversations Ratings",
+        "displayTemplate":"misc/bv-conversations-ratings",
+        "editViewFields":[
+            {"name":"widgetType", "fieldLabel":"Widget Type", "xtype":"combo", "store":[[ "summary","Summary"],["customerReviews","Customer Reviews"], ["qanda","Q & A"]]},
+            {"name":"tabCode", "fieldLabel":"Tab Code"}
+            ],
+        "icon":"/resources/admin/widgets/BV_Conversations.png",
+        "validPageTypes":["product"]
+    },
+    { 
+        "id":"bv-conversations-roibeacon",
+        "displayName":"BazaarVoice Conversations ROI Beacon",
+        "displayTemplate":"misc/bv-conversations-roi",
+        "icon":"/resources/admin/widgets/BV_ROI_Beacon.png",
+        "validPageTypes":["order"]
+    },
+    { 
+        "id":"kount_logo",
+        "displayName":"Kount Fraud Detection",
+        "displayTemplate":"misc/kount-logo",
+        "editViewFields":[{
+            "name":"merchantId",
+            "fieldLabel":"Merchant ID"
+        }, {
+            "name":"tenantUrl",
+            "fieldLabel":"Kount Tenant URL"
+        }],
+        "icon":"/resources/admin/widgets/28_fraud_detection.png",
+        "validPageTypes":["checkout"]
+    }]
+}

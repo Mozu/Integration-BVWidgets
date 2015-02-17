@@ -1,0 +1,32 @@
+
+{% if not pageContext.IsCrawler and model.config.widgetType != "seo" %}
+  <div data-mz-bv-config="{%json_attribute model.config%}"></div>   
+    
+    <input type="hidden" id="bvProductDetail" value="1"></div>
+    {% if model.config.widgetType == "summary"%}
+        <div id="BVRRSummaryContainer"></div>
+    {% endif %}
+    
+    {%if model.config.widgetType == "customerReviews"%}
+        <div id="BVRRContainer"></div>
+    {% endif %}
+    
+    {%if model.config.widgetType == "qanda"%}
+        <div id="BVQAContainer"></div>
+    {% endif %}
+    
+    {% require_script "widgets/bazaarvoice" %}
+{% endif %}
+
+{% with pageContext.query.shwoSEO|default("0") as showSEO %}
+{% if (pageContext.IsCrawler and model.config.widgetType == "seo") or (model.config.widgetType == "seo" and showSEO == 1) %}
+   {% with "productCode eq '{0}' and pageNumber eq {1}" as qFormat%}
+        {% with pageContext.query.pageNumber|default("1") as pageNum %}
+                {% with qFormat|string_format(pageModel.productCode, pageNum) as q %}
+                   {% include_entities "Widgets/BVConversations/bv-seo-review-template" listFQN="bvproductreviews@mzint"  query=q %}
+                   
+                {% endwith %}   
+        {% endwith %}    
+   {% endwith %}
+{% endif %}
+{% endwith %}

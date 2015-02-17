@@ -1,0 +1,29 @@
+{% if model.items %}
+	
+	{% for r in model.items %}
+	    <div id="BVRRSummaryContainer">
+    		<!--begin-aggregate-rating-->
+    		{{r.avgRatingHtml|safe}}
+    		<!--end-aggregate-rating-->
+		</div>
+		<div id="BVRRContainer">
+    		<!--begin-reviews-->
+    		{{r.ratingsHtml|safe}}
+    		<script type="text/javascript">
+            	if (document.getElementById('bvseo-reviewsSection')) {
+            		document.getElementById('bvseo-reviewsSection').style.display = 'none';
+            	}
+            </script>
+    		<!--end-reviews-->
+		
+		{% with pageNum|add:"1" as nextPage %}
+            {% with qFormat|string_format(pageModel.productCode, nextPage) as q %}
+                {% include_entities "Widgets/BVConversations/bv-seo-review-page-template" listFQN="bvproductreviews@mzint"  query=q %}
+            {% endwith %}
+        {% endwith %}
+		{{r.footerHtml|safe}}
+		</div>
+	{% endfor %}
+{% endif %}
+
+

@@ -1,0 +1,3 @@
+
+<input type="hidden" id="bvROIWidget" value="1">
+{% require_script "widgets/bazaarvoice" %}
