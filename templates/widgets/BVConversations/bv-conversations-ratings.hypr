@@ -2,7 +2,7 @@
 {% if not pageContext.IsCrawler and model.config.widgetType != "seo" %}
   <div data-mz-bv-config="{%json_attribute model.config%}"></div>   
     
-    <input type="hidden" id="bvProductDetail" value="1"></div>
+    <input type="hidden" id="bvProductDetail" value="1">
     {% if model.config.widgetType == "summary"%}
         <div id="BVRRSummaryContainer"></div>
     {% endif %}
