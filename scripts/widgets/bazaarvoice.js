@@ -97,22 +97,22 @@ require([
                             $BV.SI.trackTransactionPageView(bvOrder);
                         } else if (isContainerPage) {
                             $BV.container('global', {});
-                        } else {
-                            var hash = {};
-                            $('.bvr-inline-rating').each(function() {
+                        }
+                        
+                        var hash = {};
+                        $('.bvr-inline-rating').each(function() {
                                 var $this = $(this);
                                 var productCode = $this.data('mzProductCode');
                                 hash[productCode] = {
                                     url: $this.data('mzProductUrl'),
                                     containerId: $this.attr('id')
                                 };
-                            });
-
-                            var products = {};
-                            products["productIds"] = hash;
-                            products["containerPrefix"] = "BVRRInlineRating";
-                            $BV.ui('rr', 'inline_ratings', products);
-                        }
+                        });
+        
+                        var products = {};
+                        products["productIds"] = hash;
+                        products["containerPrefix"] = "BVRRInlineRating";
+                        $BV.ui('rr', 'inline_ratings', products);
                     })
                     .fail(function(jqxhr, settings, exception) {
                         console.log(jqxhr);
