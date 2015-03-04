@@ -14,7 +14,7 @@
         "displayName":"BazaarVoice Conversations Ratings",
         "displayTemplate":"BVCoversations/bv-conversations-ratings",
         "editViewFields":[
-            {"name":"widgetType", "fieldLabel":"Widget Type", "xtype":"combo", "store":[[ "summary","Summary"],["customerReviews","Customer Reviews"], ["qanda","Q & A"]]},
+            {"name":"widgetType", "fieldLabel":"Widget Type", "xtype":"combo", "store":[[ "summary","Summary"],["customerReviews","Customer Reviews"], ["qanda","Q & A"],["seo","SEO"]]},
             {"name":"tabCode", "fieldLabel":"Tab Code"}
             ],
         "icon":"/resources/admin/widgets/BV_Conversations.png",
