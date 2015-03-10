@@ -18,7 +18,7 @@
     {% require_script "widgets/bazaarvoice" %}
 {% endif %}
 
-{% with pageContext.query.shwoSEO|default("0") as showSEO %}
+{% with pageContext.query.showSEO|default("0") as showSEO %}
 {% if (pageContext.IsCrawler and model.config.widgetType == "seo") or (model.config.widgetType == "seo" and showSEO == 1) %}
    {% with "productCode eq '{0}' and pageNumber eq {1}" as qFormat%}
         {% with pageContext.query.pageNumber|default("1") as pageNum %}
