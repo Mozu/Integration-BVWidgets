@@ -41,7 +41,7 @@ require([
                             $BV.ui('rr', 'show_reviews', {
                                 doShowContent: function() {
                                     if (widgetType == "summary") {
-                                        // tabCode // THIS REQUIRES MORE EXPOSITION
+                                        showReviewSummary();
                                     }
                                 }
                             });
