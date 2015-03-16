@@ -4,6 +4,11 @@
     
     <input type="hidden" id="bvProductDetail" value="1">
     {% if model.config.widgetType == "summary"%}
+        <script>
+          function showReviewSummary() {
+            {{ model.config.tabCode|safe }}
+          }
+        </script>
         <div id="BVRRSummaryContainer"></div>
     {% endif %}
     
