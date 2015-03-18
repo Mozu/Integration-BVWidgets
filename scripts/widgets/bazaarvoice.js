@@ -109,10 +109,12 @@ require([
                                 };
                         });
         
-                        var products = {};
-                        products["productIds"] = hash;
-                        products["containerPrefix"] = "BVRRInlineRating";
-                        $BV.ui('rr', 'inline_ratings', products);
+                        if (!jQuery.isEmptyObject(hash)) { 
+                            var products = {};
+                            products["productIds"] = hash;
+                            products["containerPrefix"] = "BVRRInlineRating";
+                            $BV.ui('rr', 'inline_ratings', products);
+                        }
                     })
                     .fail(function(jqxhr, settings, exception) {
                         console.log(jqxhr);
