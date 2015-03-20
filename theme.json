@@ -6,7 +6,16 @@
     "isMobile": false,
     "version": "0.1.0"
   },
-  "pageTypes": [],
+  "pageTypes": [
+      {
+        "documentType": "web_page",
+        "entityType": "webpage",
+        "id": "bvContainer",
+        "template": "bazaarvoice",
+        "title": "BazaarVoice Container Page",
+        "userCreatable": true
+      }
+    ],
   "widgets": [
   { 
         "category" : "catalog",
