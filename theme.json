@@ -21,7 +21,7 @@
         "category" : "catalog",
         "id":"bv-conversations-ratings",
         "displayName":"BazaarVoice Conversations Ratings",
-        "displayTemplate":"BVCoversations/bv-conversations-ratings",
+        "displayTemplate":"BVConversations/bv-conversations-ratings",
         "editViewFields":[
             {"name":"widgetType", "fieldLabel":"Widget Type", "xtype":"combo", "store":[[ "summary","Summary"],["customerReviews","Customer Reviews"], ["qanda","Q & A"],["seo","SEO"]]},
             {"name":"tabCode", "fieldLabel":"Tab Code"}
@@ -32,7 +32,7 @@
     { 
         "id":"bv-conversations-roibeacon",
         "displayName":"BazaarVoice Conversations ROI Beacon",
-        "displayTemplate":"BVCoversations/bv-conversations-roi",
+        "displayTemplate":"BVConversations/bv-conversations-roi",
         "icon":"/resources/admin/widgets/BV_ROI_Beacon.png",
         "validPageTypes":["order"]
     }]
