@@ -24,7 +24,7 @@ require([
                 var isWidget = $("#bvProductDetail").val() == 1;
                 var isROIWidget = $("#bvROIWidget").val() == 1;
                 var isContainerPage = $("#containerPage").val() == 1;
-                var deploymentZone = data.deploymentZone.replace(" ", "_");
+                var deploymentZone = data.deploymentZone;
                 var locale = Api.context.locale.replace("-", "_");
                 var bvScript = "//display" + staging + ".ugc.bazaarvoice.com/static/" + data.clientName + "/"+ deploymentZone +"/" + locale + "/bvapi.js";
 
