@@ -26,7 +26,7 @@ require([
                 var isContainerPage = $("#containerPage").val() == 1;
                 var deploymentZone = data.deploymentZone.replace(" ", "_");
                 var locale = Api.context.locale.replace("-", "_");
-                var bvScript = "//display" + staging + ".ugc.bazaarvoice.com/static/" + data.clientName + "/" + locale + "/bvapi.js";
+                var bvScript = "//display" + staging + ".ugc.bazaarvoice.com/static/" + data.clientName + "/"+ deploymentZone +"/" + locale + "/bvapi.js";
 
 
                 $.getScript(bvScript)
