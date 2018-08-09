@@ -35,6 +35,9 @@
             {% include "modules/product/price-stack" %}
         {% endif %}
 
+        <!-- Add group name to product -->
+        <div id="BVRRInlineRating-{{model.productCode}}" class="bvr-inline-rating" data-mz-product-code="{{ model.productCode }}" data-mz-product-url="{{ model.url }}"></div>
+
         {% block product-extrainfo %}
         {% if dealOfTheDay %}
           {% if dealOfTheDay.savings %}

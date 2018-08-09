@@ -1,5 +1,5 @@
 {
-  "name": "mozu-core-theme",
+  "name": "bazaar-voice-widget",
   "author": "Volusion, Inc.",
   "description": "The core storefront theme for Mozu.",
   "version": "9.6.0",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mozu/core-theme.git"
+    "url": "git+https://github.com/mozu/core-theme.git"
   },
   "devDependencies": {
     "grunt": "~0.4",
@@ -42,5 +42,10 @@
       "js/scrollspy.js"
     ]
   },
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mozu/core-theme/issues"
+  },
+  "homepage": "https://github.com/mozu/core-theme#readme",
+  "main": "Gruntfile.js"
 }

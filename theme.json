@@ -195,6 +195,14 @@
                 ]
               }
             ]
+          },
+          {
+            "documentType": "web_page",
+            "entityType": "webpage",
+            "id": "bvContainer",
+            "template": "bazaarvoice",
+            "title": "BazaarVoice Container Page",
+            "userCreatable": true
           }
         ]
       },
@@ -789,6 +797,25 @@
         }
     ],
     "widgets": [
+        { 
+            "category" : "catalog",
+            "id":"bv-conversations-ratings",
+            "displayName":"BazaarVoice Conversations Ratings",
+            "displayTemplate":"BVConversations/bv-conversations-ratings",
+            "editViewFields":[
+                {"name":"widgetType", "fieldLabel":"Widget Type", "xtype":"combo", "store":[[ "summary","Summary"],["customerReviews","Customer Reviews"], ["qanda","Q & A"],["seo","SEO"]]},
+                {"name":"tabCode", "fieldLabel":"Tab Code"}
+                ],
+            "icon":"/resources/admin/widgets/BV_Conversations.png",
+            "validPageTypes":["product"]
+        },
+        { 
+            "id":"bv-conversations-roibeacon",
+            "displayName":"BazaarVoice Conversations ROI Beacon",
+            "displayTemplate":"BVConversations/bv-conversations-roi",
+            "icon":"/resources/admin/widgets/BV_ROI_Beacon.png",
+            "validPageTypes":["order"]
+        },
         {
             "defaultConfig": {
                 "template": "modules/product/product-list"

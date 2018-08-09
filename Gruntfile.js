@@ -1,6 +1,9 @@
 /* global module: true */
 module.exports = function (grunt) {
   'use strict';
+
+  require('process').env.NODE_TLS_REJECT_UNAUTHORIZED = "0"; // jshint ignore:line
+
   var pkg = grunt.file.readJSON('./package.json');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -223,6 +226,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'build',
-    'watch:sync'
+    'mozusync:upload'
     ]);
 };

@@ -16,6 +16,7 @@
 	
     <div data-mz-productimages class="mz-productimages mz-l-sidebar">
         {% include "modules/product/product-images" %}
+        {% dropzone "zone-below-image" scope="template" %}
     </div>
 
     <div class="mz-productdetail-wrap">
