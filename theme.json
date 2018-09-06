@@ -803,17 +803,17 @@
             "displayName":"BazaarVoice Conversations Ratings",
             "displayTemplate":"BVConversations/bv-conversations-ratings",
             "editViewFields":[
-                {"name":"widgetType", "fieldLabel":"Widget Type", "xtype":"combo", "store":[[ "summary","Summary"],["customerReviews","Customer Reviews"], ["qanda","Q & A"],["seo","SEO"]]},
-                {"name":"tabCode", "fieldLabel":"Tab Code"}
+                {"name":"widgetType", "fieldLabel":"Widget Type", "xtype":"combo", "store":[[ "summary","Summary"],["customerReviews","Customer Reviews"], ["qanda","Q & A"],["seo","SEO"],["inlineRating","Inline Rating"]]},
+                {"name":"bvPixel", "fieldLabel":"BV Pixel", "xtype":"checkbox"}
                 ],
             "icon":"/resources/admin/widgets/BV_Conversations.png",
             "validPageTypes":["product"]
         },
         { 
-            "id":"bv-conversations-roibeacon",
-            "displayName":"BazaarVoice Conversations ROI Beacon",
-            "displayTemplate":"BVConversations/bv-conversations-roi",
-            "icon":"/resources/admin/widgets/BV_ROI_Beacon.png",
+            "id":"bv-conversations-pixel",
+            "displayName":"BazaarVoice Conversations Pixel",
+            "displayTemplate":"BVConversations/bv-conversations-pixel",
+            "icon":"/resources/admin/widgets/BV_Pixel_Beacon.png",
             "validPageTypes":["order"]
         },
         {

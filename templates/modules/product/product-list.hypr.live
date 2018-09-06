@@ -5,7 +5,7 @@
             <li class="mz-productlist-item" data-mz-product="{{ prod.productCode }}">{% include "modules/product/product-listing" with model=prod %}</li>
         {% endfor %}
     </ul>
-    {% require_script "widgets/bazaarvoice" %}
+    {% require_script "widgets/inline-rating" %}
     {% endif %}
 </div>
 
