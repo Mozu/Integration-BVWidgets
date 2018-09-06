@@ -1,0 +1,54 @@
+
+{% if not pageContext.IsCrawler and model.config.widgetType != "seo" %}
+  <div data-mz-bv-config="{%json_attribute model.config%}"></div>   
+    
+    <input type="hidden" id="bvProductDetail" value="1">
+    {% if model.config.widgetType == "summary"%}
+        <script>
+          function showReviewSummary() {
+            {{ model.config.tabCode|safe }}
+          }
+        </script>
+        {% if pageContext.isEditMode == 'true' %}
+          BazaarVoice Display widget
+        {% endif %}
+        <div data-bv-show="rating_summary" class="bv_object"></div>
+    {% endif %}
+    
+    {%if model.config.widgetType == "customerReviews"%}
+        {% if pageContext.isEditMode == 'true' %}
+          BazaarVoice Customer Reviews widget
+        {% endif %}
+        <div data-bv-show="reviews" class="bv_object"></div>
+    {% endif %}
+    
+    {%if model.config.widgetType == "qanda"%}
+        {% if pageContext.isEditMode == 'true' %}
+          BazaarVoice Q&A widget
+        {% endif %}
+        <div data-bv-show="questions" class="bv_object"></div>
+    {% endif %}
+
+    {%if model.config.widgetType == "inlineRating"%}
+      {% if pageContext.isEditMode == 'true' %}
+        BazaarVoice Inline Rating widget
+      {% endif %}
+      <div id="inline-{{pageModel.productCode}}" class="bvr-inline-rating"></div>
+      {% require_script "widgets/inline-rating" %}
+    {% endif %}
+    
+    {% require_script "widgets/bazaarvoice" %}
+{% endif %}
+
+{% with pageContext.query.showSEO|default("0") as showSEO %}
+{% if (pageContext.IsCrawler and model.config.widgetType == "seo") or (model.config.widgetType == "seo" and showSEO == 1) %}
+   {% with "productCode eq '{0}' and pageNumber eq {1}" as qFormat%}
+        {% with pageContext.query.pageNumber|default("1") as pageNum %}
+                {% with qFormat|string_format(pageModel.productCode, pageNum) as q %}
+                   {% include_entities "Widgets/BVConversations/bv-seo-review-template" listFQN="bvproductreviews@mozuadmin"  query=q%}
+
+                {% endwith %}   
+        {% endwith %}    
+   {% endwith %}
+{% endif %}
+{% endwith %}

@@ -1,0 +1,21 @@
+{% extends "page" %}
+
+{% block title-tag-content %} Bazaarvoice - {% parent %} {% endblock title-tag-content %}
+
+{% block extra-heading-contents%}
+      <meta name="robots" content="noindex, nofollow">
+      <link rel="canonical" href="/bazaarvoice"/>
+{% endblock extra-heading-contents%}
+
+{% block body-tag-classes %} mz-bazaarvoice {% endblock body-tag-classes %}
+
+{% block body-content %}
+
+<div>
+    <input type="hidden" id="containerPage" value="1">
+</div>
+
+{% require_script "widgets/bazaarvoice" %}
+
+{% endblock body-content %}
+

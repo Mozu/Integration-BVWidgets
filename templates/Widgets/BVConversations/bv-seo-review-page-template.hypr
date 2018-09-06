@@ -1,0 +1,13 @@
+{% if model.items %}
+    <!--begin-pagination-->
+    <ul id="bvseo-=paginationSection">
+    	<li class="bvseo-paginationItem">
+		    {% if pageContext.query.showSEO == 1 %}
+    		    <a class="bvseo-paginationLink" href="?pageNumber={{nextPage}}&showSEO=1">{{pageModel.productName}} - page {{nextPage}}</a>
+		    {% else %}
+				<a class="bvseo-paginationLink" href="?pageNumber={{nextPage}}">{{pageModel.productName}} - page {{nextPage}}</a>
+			{% endif %}
+    	</li>
+    </ul>	
+    <!--end-pagination-->
+{% endif %}
