@@ -45,7 +45,7 @@
    {% with "productCode eq '{0}' and pageNumber eq {1}" as qFormat%}
         {% with pageContext.query.pageNumber|default("1") as pageNum %}
                 {% with qFormat|string_format(pageModel.productCode, pageNum) as q %}
-                   {% include_entities "Widgets/BVConversations/bv-seo-review-template" listFQN="bvproductreviews@mozuadmin"  query=q%}
+                   {% include_entities "Widgets/BVConversations/bv-seo-review-template" listFQN="bvproductreviews@a0842dd"  query=q%}
 
                 {% endwith %}   
         {% endwith %}    

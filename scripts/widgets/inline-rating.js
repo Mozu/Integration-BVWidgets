@@ -13,7 +13,7 @@ require([
         $(document).ready(function() {
 
             var res = Api.get('entityList', {
-                listName: 'bvsettings@mozuadmin',
+                listName: 'bvsettings@a0842dd',
                 id: Api.context.site
             });
             res.then(function(r) {

@@ -17,7 +17,7 @@
 		
 		{% with pageNum|add:"1" as nextPage %}
             {% with qFormat|string_format(pageModel.productCode, nextPage) as q %}
-                {% include_entities "Widgets/BVConversations/bv-seo-review-page-template" listFQN="bvproductreviews@mozuadmin"  query=q %}
+                {% include_entities "Widgets/BVConversations/bv-seo-review-page-template" listFQN="bvproductreviews@a0842dd"  query=q %}
             {% endwith %}
         {% endwith %}
 		{{r.footerHtml|safe}}

@@ -803,8 +803,7 @@
             "displayName":"BazaarVoice Conversations Ratings",
             "displayTemplate":"BVConversations/bv-conversations-ratings",
             "editViewFields":[
-                {"name":"widgetType", "fieldLabel":"Widget Type", "xtype":"combo", "store":[[ "summary","Summary"],["customerReviews","Customer Reviews"], ["qanda","Q & A"],["seo","SEO"],["inlineRating","Inline Rating"]]},
-                {"name":"bvPixel", "fieldLabel":"BV Pixel", "xtype":"checkbox"}
+                {"name":"widgetType", "fieldLabel":"Widget Type", "xtype":"combo", "store":[[ "summary","Summary"],["customerReviews","Customer Reviews"], ["qanda","Q & A"],["seo","SEO"],["inlineRating","Inline Rating"]]}
                 ],
             "icon":"/resources/admin/widgets/BV_Conversations.png",
             "validPageTypes":["product"]
