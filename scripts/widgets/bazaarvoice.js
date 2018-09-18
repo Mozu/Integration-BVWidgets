@@ -8,7 +8,7 @@ define(['modules/jquery-mozu','underscore', 'hyprlive', "modules/backbone-mozu",
 		var mzBazaarVoice = {
 			getConfig: function() {
 				return Api.get('entityList', {
-	                listName: 'bvsettings@a0842dd',
+	                listName: 'bvsettings@mzint',
 	                id: Api.context.site
 	            }).then(function(result){
 	            	return result.data.items[0];
